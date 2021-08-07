@@ -3,8 +3,7 @@
   /* to include padding & border in width & heigher calculations */
   box-sizing: border-box;
 }
-h1,
-h2 {
+h1, h2 {
   font-family: "Signika", sans-serif;
 }
 h1 {

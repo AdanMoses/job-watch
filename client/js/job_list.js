@@ -24,7 +24,7 @@ function showJobs() {
       </ul>
     </header>
     <ul>
-      <li>${job.close_date}</li>
+      <li>${job.close_date.slice(0, 10)}</li>
       <li>${job.contact}</li>
       <li>${job.notes}</li>
       <li>${job.status}</li>

@@ -4,8 +4,8 @@ function renderHeaderNav() {
     <h1>JobWatch</h1>
 
     <ul>
-      <li class="material-icons work" id="button" onclick="render('addJob')">work</li> 
-      <li class="material-icons list" onclick="render('jobList')">list</li> 
+      <li class="material-icons work" class="button" onclick="render('addJob')">work</li> 
+      <li class="material-icons list" class="button" onclick="render('jobList')">list</li> 
     </ul>
   </nav>
   `;
@@ -21,7 +21,7 @@ function render(component) {
   }
 }
 
-const button = document.querySelector('#button')
+const button = document.querySelector('.button')
 let clicked = false
 
 button.addEventListener('click', () => {

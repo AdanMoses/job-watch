@@ -2,51 +2,52 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Signika:wght@700&display=swap" rel="stylesheet">  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/navigation.css">
-    <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="/css/forms.css">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Signika:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/navigation.css">
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="/css/forms.css">
 
-    <title>Document</title>
+
+  <title>Log Into JobWatch</title>
 
 </head>
 
 <body>
-    <h1 id="header">Log In</h1>
-    <h2 id="errors"></h2>
+  <h1 id="header">Log In</h1>
+  <h2 id="errors"></h2>
 
-    <form id="login">
-        <input type="text" name="name" placeholder="Name">
-        <input type="text" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="Log in">
-    </form>
+  <form id="login">
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" value="Log in">
+  </form>
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script>
-        const form = document.querySelector('#login')
-        form.addEventListener('submit', event => {
-            event.preventDefault();
-            const data = Object.fromEntries(new FormData(form));
-            axios.post('/api/sessions', data)
-            .then(sessionInfo => {
-                    window.location = '/'
-            })
-            .catch(error => {
-                // console.log(error)
-                    document.querySelector('#errors')
-                        .innerHTML = error.response.data.error;
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    const form = document.querySelector('#login')
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const data = Object.fromEntries(new FormData(form));
+      axios.post('/api/sessions', data)
+        .then(sessionInfo => {
+          window.location = '/'
+        })
+        .catch(error => {
+          // console.log(error)
+          document.querySelector('#errors')
+            .innerHTML = error.response.data.error;
         })
     })
-    </script>
+  </script>
 
 </body>
 

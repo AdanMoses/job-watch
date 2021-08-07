@@ -50,8 +50,6 @@ function renderAddJob() {
             </li>
           </ul>
 
-
-
       </fieldset>
       
       <button id="add-job">Submit</button>

@@ -17,8 +17,7 @@
 function renderEditJob() {
   const id = window.location.pathname.split("/").splice(2)[0]
   const selectedJob = state.jobs.find(job => job.id == id)
-  // console.log(selectedJob)
-  // console.log(selectedJob.date)
+
   document.querySelector('#page').innerHTML = `
   <section class="job">
     <h1>Edit Job</h1>
@@ -57,12 +56,17 @@ function renderEditJob() {
       </fieldset>
 
       <fieldset>
-        <label for="">Status:</label>
-        <input type="radio" id="Completed" name="status" value="Completed">
-        <label for="completed">Completed</label><br>
+        <ul>
+          <li>
+            <input type="radio" name="status" value="Completed">
+            <label for="completed" id="completed">Completed</label><br>
+          </li>
 
-        <input type="radio" id="Incomplete" name="status" value="Incomplete">
-        <label for="incomplete">Incomplete</label>
+          <li>
+            <input type="radio" name="status" value="Incomplete">
+            <label for="incomplete" id="incomplete">Incomplete</label>
+          </li>
+        </ul>
       </fieldset>
       
       <button id="add-job">Submit</button>
@@ -70,6 +74,8 @@ function renderEditJob() {
     </form>
   </section>
   `
+  console.log(selectedJob)
+  console.log(selectedJob.date)
 }
 
 function editJob(event) {
@@ -80,16 +86,20 @@ function editJob(event) {
   // console.log(id)
 
   const data = Object.fromEntries(new FormData(form))
-
+  console.log(data)
   axios.patch(`/api/jobs/${id}`, data) // need to get id from where
     .then(successResponse => {
       const updatedJob = successResponse.data
       // console.log(updatedJob)
     })
+    .then(() => {
+      window.location = '/'
+    })
     .catch(errorResponse => {
       document.querySelector('#error')
         .innerHTML = errorResponse.response.data.message
     })
+  
 }
 
 getJob().then(renderEditJob)

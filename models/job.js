@@ -24,7 +24,7 @@ const Job = {
     UPDATE jobs
     SET role = $1,
         company = $2,
-        link = $3
+        link = $3,
         close_date = $4,
         contact = $5,
         notes = $6,
