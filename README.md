@@ -47,8 +47,14 @@ At the beginning of this project we spent half a day brainstorming ideas and pot
 8. At first we simply got the functionality to work on the front end and then once the correct data was being pulled through and most of the functionality was present we moved onto styling and design.
 9. The final stage was to upload the project to Heroku
 
-![images/draft wireframe.png]()
+![wireframe](images/draft wireframe.png)
 ![Designs]()
+
+### Design Ideas
+
+![color-ideas](https://imgur.com/ppl9ISI)
+![color-palette](https://imgur.com/YDccRq4)
+![column-ideas](https://imgur.com/crBhonT)
 
 We used Trello throughout the process as our project management tool. Each morning we would group up and talk one by one about what we'd achieved the day before, what we thought still needed to be done and then we'd add any extra cards to the Trello board based on what we thought we needed to do. We would then each claim a couple for the day and try to make sure that we weren't encroaching on any files that each-other were working on to avoid merge conflicts.
 
