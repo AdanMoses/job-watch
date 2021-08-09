@@ -30,6 +30,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 0.5em;
+  background-color: var(--grey);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
@@ -38,15 +39,86 @@
   flex-direction: column;
 }
 
+.card-title > h3 {
+  background-color: var(--white);
+  border-radius: 0.5em;
+  padding: 1em 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.card-title > h4 {
+  padding: 0;
+  margin: 0;
+}
+
 .card-list {
   display: flex;
   flex-direction: column;
   justify-content: left;
+  text-align: center;
+  background-color: var(--white);
+  border-radius: 0.5em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 0.5em;
+  padding-left: 0;
+}
+
+.card-list-close-date {
+  background-color: var(--lighter-green);
+  border-radius: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  margin: 1em 1em;
+  padding: 1em;
+}
+
+.card-list-contact-person {
+  background-color: var(--lighter-orange);
+  border-radius: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  margin: 1em 1em;
+  padding: 1em;
+}
+
+.card-list-notes {
+  background-color: var(--lighter-vino);
+  border-radius: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  margin: 1em 1em;
+  padding: 1em;
+}
+
+.card-list-title-text {
+  color: var(--dark-grey);
+}
+
+.link-to-job > a {
+  color: var(--dark-grey);
+  text-decoration: none;
 }
 
 .edit-list {
   display: flex;
   flex-direction: row;
+  margin: 0;
+  justify-content: space-between;
+  color: var(--dark-grey);
+  padding: 0 0;
+}
+
+.edit-job > a {
+  margin-left: 3em;
+}
+
+.edit-list > li > span > a {
+  color: var(--dark-grey);
+}
+
+#job-edit-button {
+  align-self: flex-start;
+}
+
+#job-delete-button {
+  align-self: flex-end;
 }
 
 /* 768px is the iPad in portrait mode */

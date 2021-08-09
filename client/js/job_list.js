@@ -23,17 +23,18 @@ function showJobsIncomplete() {
   <section class="job-card" data-id=${job.id}>
     <header class="card-title">
       <h3>${job.role}</h3>
+      <h4>@</h4>
       <h3>${job.company}</h3>
     </header>
     <ul class="card-list">
-      <li><a href="${job.link}">Link to job</a></li>
-      <li>${job.close_date.slice(0, 10)}</li>
-      <li>${job.contact}</li>
-      <li>${job.notes}</li>
+      <li class="card-list-close-date"><span class="card-list-title-text">Close Date</span><br>${job.close_date.slice(0, 10)}</li>
+      <li class="card-list-contact-person"><span class="card-list-title-text">Contact Person</span><br>${job.contact}</li>
+      <li class="card-list-notes"><span class="card-list-title-text">Notes</span><br>${job.notes}</li>
     </ul>
     <ul class="edit-list">
-      <li><span class="material-icons delete-job" onClick="deleteJob(event)">delete job</span></li>
-      <li><span class="material-icons edit-job"><a href="/jobs/${job.id}">edit</a></span></li>
+      <li id="job-edit-button"><span class="material-icons edit-job"><a href="/jobs/${job.id}">edit</a></span></li>
+      <li class="material-icons link-to-job"><a href="${job.link}">link</a></li>
+      <li id="job-delete-button"><span class="material-icons delete-job" onClick="deleteJob(event)">delete job</span></li>
     </ul>
   </section>
 
@@ -48,17 +49,18 @@ function showJobsCompleted() {
   <section class="job-card" data-id=${job.id}>
     <header class="card-title">
       <h3>${job.role}</h3>
+      <h4>@</h4>
       <h3>${job.company}</h3>
     </header>
     <ul class="card-list">
-      <li><a href="${job.link}">Link to job</a></li>
-      <li>${job.close_date.slice(0, 10)}</li>
-      <li>${job.contact}</li>
-      <li>${job.notes}</li>
+      <li class="card-list-close-date"><span class="card-list-title-text">Close Date</span><br>${job.close_date.slice(0, 10)}</li>
+      <li class="card-list-contact-person"><span class="card-list-title-text">Contact Person</span><br>${job.contact}</li>
+      <li class="card-list-notes"><span class="card-list-title-text">Notes</span><br>${job.notes}</li>
     </ul>
     <ul class="edit-list">
-      <li><span class="material-icons delete-job" onClick="deleteJob(event)">delete job</span></li>
-      <li><span class="material-icons edit-job"><a href="/jobs/${job.id}">edit</a></span></li>
+      <li id="job-edit-button"><span class="material-icons edit-job"><a href="/jobs/${job.id}">edit</a></span></li>
+      <li class="material-icons link-to-job"><a href="${job.link}">link</a></li>
+      <li id="job-delete-button"><span class="material-icons delete-job" onClick="deleteJob(event)">delete job</span></li>
     </ul>
   </section>
 
