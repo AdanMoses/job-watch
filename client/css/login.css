@@ -1,12 +1,45 @@
 /* h2, span {
   margin-left: 6%;
 } */
-#login, #sign-up-form, .login-nav {
+.login-nav {
   display: flex;
   padding: 10px;
   justify-content: space-around;
 
 }
+
+#sign-up-form {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  justify-self: center;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+}
+
+#sign-up-form > input {
+  margin: 1em 0;
+}
+
+#sign-up-form > button {
+  margin: 1em 0;
+}
+
+#login {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  justify-self: center;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+}
+
+#login > input {
+  margin: 1em 0;
+}
+
 input[type=password] {
   padding:5px;
   width: 100%;

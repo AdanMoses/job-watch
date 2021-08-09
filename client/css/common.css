@@ -14,6 +14,7 @@
   --lighter-vino: #c38d9e2c;
   --lighter-green: #41b3a42c;
   --lighter-purple: #8b7aec21;
+  --darker-vino: #613442;
 }
 
 /* Common */
@@ -28,6 +29,11 @@ h1, h2 {
 
 h1 {
   font-size: 40px;
+}
+
+h2 {
+  text-align: center;
+  color: var(--purple);
 }
 
 #header-nav > nav > h1 > a {

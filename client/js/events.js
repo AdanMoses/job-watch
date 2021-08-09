@@ -10,15 +10,15 @@ function renderEvents() {
 function events() {
   const jobs = state.jobs
   return jobs.map(job => `
-  <section class="job" data-id=${job.id}>
+  <section class="job-card" data-id=${job.id}>
     <header>
-      <h2>${job.role} - ${job.company}</h2>
+      <h3>${job.role} @ ${job.company}</h3>
     </header>
     <ul>
-      <li>Close date: ${job.close_date.slice(0, 10)}</li>
-      <li>Contact: ${job.contact}</li>
-      <li>Notes: ${job.notes}</li>
-      <li>Status: ${job.status}</li>
+      <li class="card-list-close-date"><span class="card-list-title-text">Close date:</span> ${job.close_date.slice(0, 10)}</li>
+      <li class="card-list-contact-person"><span class="card-list-title-text">Contact:</span> ${job.contact}</li>
+      <li class="card-list-notes"><span class="card-list-title-text">Notes:</span> ${job.notes}</li>
+      <li><span class="card-list-title-text">Status:</span> ${job.status}</li>
     </ul>
   </section>
   `).join('')
