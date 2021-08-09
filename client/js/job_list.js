@@ -33,7 +33,7 @@ function showJobsIncomplete() {
     </ul>
     <ul class="edit-list">
       <li id="job-edit-button"><span class="material-icons edit-job"><a href="/jobs/${job.id}">edit</a></span></li>
-      <li class="material-icons link-to-job"><a href="${job.link}">link</a></li>
+      <li class="material-icons link-to-job"><a href="${job.link}" target="_blank">link</a></li>
       <li id="job-delete-button"><span class="material-icons delete-job" onClick="deleteJob(event)">delete job</span></li>
     </ul>
   </section>
@@ -59,7 +59,7 @@ function showJobsCompleted() {
     </ul>
     <ul class="edit-list">
       <li id="job-edit-button"><span class="material-icons edit-job"><a href="/jobs/${job.id}">edit</a></span></li>
-      <li class="material-icons link-to-job"><a href="${job.link}">link</a></li>
+      <li class="material-icons link-to-job"><a href="${job.link}" target="_blank">link</a></li>
       <li id="job-delete-button"><span class="material-icons delete-job" onClick="deleteJob(event)">delete job</span></li>
     </ul>
   </section>
