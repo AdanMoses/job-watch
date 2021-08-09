@@ -63,6 +63,7 @@ body {
   overflow-wrap: break-word;
   display: grid;
   grid-template-columns: 1fr;
+  overflow: clip;
 }
 
 .content {
