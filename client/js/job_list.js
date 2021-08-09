@@ -70,7 +70,7 @@ function showJobsCompleted() {
 
 function deleteJob(event) {
   const deleteButton = event.target
-  const jobDom = deleteButton.closest('.job')
+  const jobDom = deleteButton.closest('.job-card')
   const jobId = jobDom.dataset.id
   // console.log(event.target)
   // console.log(jobId)
